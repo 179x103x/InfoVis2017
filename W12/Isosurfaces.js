@@ -84,10 +84,12 @@ function Isosurfaces( volume, isovalue, number_index )
     }
 
     // material.color = new THREE.Color( "white" );
-    if( number_index == 1 )
+    if( number_index == 1 || number_index == 2 ){
         material.color = new THREE.Color().setHex( cmap[isovalue][1] );
-    else if( number_index == 3 )
+    }
+    else if( number_index == 3 ){
         //
+    }
 
     return new THREE.Mesh( geometry, material );
 
